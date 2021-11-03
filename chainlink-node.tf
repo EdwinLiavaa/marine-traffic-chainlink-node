@@ -35,17 +35,20 @@ resource "kubernetes_config_map" "chainlink-env" {
     #"env" = file("config/.env")
     ROOT = "/chainlink"
     LOG_LEVEL = "debug"
-    ETH_CHAIN_ID = 3
+    ETH_CHAIN_ID = 42
     MIN_OUTGOING_CONFIRMATIONS = 2
-    LINK_CONTRACT_ADDRESS = "0x20fe562d797a42dcb3399062ae9546cd06f63280"
+    #LINK_CONTRACT_ADDRESS = "0x20fe562d797a42dcb3399062ae9546cd06f63280"
+    LINK_CONTRACT_ADDRESS = "0xa36085F69e2889c224210F603D836748e7dC0088"
     CHAINLINK_TLS_PORT = 0
     SECURE_COOKIES = false
-    ORACLE_CONTRACT_ADDRESS = "0x9f37f5f695cc16bebb1b227502809ad0fb117e08"
+    #ORACLE_CONTRACT_ADDRESS = "0x9f37f5f695cc16bebb1b227502809ad0fb117e08"
     ALLOW_ORIGINS = "*"
-    MINIMUM_CONTRACT_PAYMENT = 100
+    #MINIMUM_CONTRACT_PAYMENT = 100
     DATABASE_URL = format("postgresql://%s:%s@postgres:5432/chainlink?sslmode=disable",var.postgres_username,random_password.postgres-password.result)
     DATABASE_TIMEOUT = 0
-    ETH_URL = "wss://ropsten-rpc.linkpool.io/ws"
+    #ETH_URL = "wss://ropsten-rpc.linkpool.io/ws"
+    ETH_URL = "wss://eth-kovan.alchemyapi.io/v2/PS4TxQPUKVPrFN6cN5Y6Aet-q2T6hBz6"
+    FEATURE_EXTERNAL_INITIATORS=true
   }
 }
 
@@ -62,12 +65,12 @@ resource "random_password" "wallet-password" {
 
 output "api-credentials" {
   value = random_password.api-password.result
-  #sensitive   = true #to hide output
+  sensitive   = true #to hide output
 }
 
 output "wallet-credentials" {
   value = random_password.wallet-password.result
-  #sensitive   = true #to hide output
+  sensitive   = true #to hide output
 }
 
 resource "kubernetes_secret" "api-credentials" {
