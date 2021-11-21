@@ -1,4 +1,7 @@
 # Hosting a Chainlink node on Google Cloud
+1. Forked from https://github.com/Pega88/chainlink-gcp
+2. Having issues with upgrading from `0.7.5` to chainlink version `0.9.10` first before upgrading to version `0.10.3` and will settle on `0.7.5`.
+3. Will investigate then upgrade to chainlink version `1.0.0` for the next version of the Chainlink Hackathon Project.
 
 ## Context
 This repository helps you install a high-available pool of chainlink nodes on Google Cloud Platform, running on Kubernetes. The setup follows the best practices put forward by the [Chainlink documentation](https://docs.chain.link/docs/best-security-practices).
