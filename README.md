@@ -1,4 +1,4 @@
-# Hosting the Marine Traffic Chainlink node on Google Cloud
+# Hosting the Marine Traffic Chainlink Node on Google Cloud
 1. Forked from https://github.com/Pega88/chainlink-gcp
 2. Having issues with upgrading from `0.7.5` to chainlink version `0.9.10` first before upgrading to version `0.10.3` and will settle on `0.7.5`.
 3. Will investigate then upgrade to chainlink version `1.0.0` for the next version of the Chainlink Hackathon Project.
