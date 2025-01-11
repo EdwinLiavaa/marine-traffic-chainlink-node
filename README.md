@@ -1,11 +1,15 @@
+<p align="center">
+ <img width="1000" src="https://github.com/EdwinLiavaa/marine-traffic-chainlink-node/blob/main/pic.png">
+</p>
+
 # Hosting the Marine Traffic Chainlink Node on Google Cloud
-1. Forked from https://github.com/Pega88/chainlink-gcp
+*  Forked from https://github.com/Pega88/chainlink-gcp
    
 ## Issues
-1. Running the setup.sh script to upgrade from `0.7.5` -> `0.9.10` -> `0.10.3` -> `1.0.0` crashes my Google Cloud Google Kubernetes Engine Cluster and will settle on `0.7.5` for the hackathon.
+* Running the setup.sh script to upgrade from `0.7.5` -> `0.9.10` -> `0.10.3` -> `1.0.0` crashes my Google Cloud Google Kubernetes Engine Cluster and will settle on `0.7.5` for the hackathon.
    
 ## Remedies
-1. Will deploy the Marine Traffic External Adapter on Chainlink Node as a Service (NaaS) with version `1.0.0`.
+* Will deploy the Marine Traffic External Adapter on Chainlink Node as a Service (NaaS) with version `1.0.0`.
 
 ## Context
 This repository helps you install a high-available pool of chainlink nodes on Google Cloud Platform, running on Kubernetes. The setup follows the best practices put forward by the [Chainlink documentation](https://docs.chain.link/docs/best-security-practices).
